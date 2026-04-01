@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<!-- saved from url=(0033)http://127.0.0.1:5500/Asmita.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>My Portfolio</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<link rel="stylesheet" href="./My Portfolio_files/sample.css"></head>
+
+<body>
+    <!--HEADER-->
+    <header>
+        <h1>My Portfolio</h1>
+    </header>
+    <!--NAVBAR-->
+    <nav>
+        <a href="http://127.0.0.1:5500/Asmita.html#">Home</a>
+        <a href="http://127.0.0.1:5500/Asmita.html#">About</a>
+         <a href="http://127.0.0.1:5500/Asmita.html#">Projects</a>
+        <a href="http://127.0.0.1:5500/Asmita.html#">Contact</a>
+    </nav>
+
+    <!-- ABOUT -->
+    <section>
+        <h2>About Me</h2>
+        <p>I am a frontend developer.</p>
+        <img src="https://via.placeholder.com/150" alt="profile">
+    </section>
+
+    <!-- PROJECTS -->
+    <section>
+        <h2>Projects</h2>
+        <div class="projects">
+            <div class="card">
+                <h3>Project 1</h3>
+                <p>Solar Pannel Tracker</p>
+            </div>
+
+            <div class="card">
+                <h3>Project 2</h3>
+                <p>Blind Shoe</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section>
+        <h2>Contact</h2>
+        <form>
+            <input type="text" placeholder="Name"> <br> <br>
+            <input type="email" placeholder="Email"><br><br>
+            <textarea placeholder="Message"></textarea><br><br>
+            <button type="button" onclick="showMessage()">Send</button>
+        </form>
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2026 My Portfolio</p>
+    </footer>
+
+    <!-- JS BASIC -->
+    <script>
+        function showMessage() {
+            alert("Message sent!");
+        }
+    </script>
+
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+
+    
+
+    
+<!-- Code inject--></body></html>
