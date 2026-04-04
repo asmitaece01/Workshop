@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>My Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    /* Universal selector */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right,#0f172a,#1e293b);
+            color: #e2e8f0;
+        }
+
+        /* Navbar */
+        nav {
+            display: flex;
+            justify-content: space-around;
+            background: #020617;
+            color: #38bdf8;
+            padding: 15px;
+            box-shadow: 0 0 10px #38bdf8;
+        }
+
+        nav a {
+            color: #e2e8f0;
+            text-decoration: none;
+        }
+        nav a:hover{
+            color: #38bdf8;
+        }
+
+        /* Section styling */
+        section {
+            padding: 40px;
+            text-align: center;
+        }
+
+        /* Project container */
+        .projects {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        /* Card design */
+        .card {
+            background: #1e293b;
+            border: 1px sold #334155;
+            padding: 20px;
+            border-radius: 15px;
+            width: 200px;
+            transition: transform 0.3s;
+        }
+
+        /* Hover effect */
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 15px #38bdf8;
+        }
+
+        button {
+            padding: 10px;
+            border: none;
+            background: linear-gradient(to right,#38bdf8,#6366f1);
+            color: white;
+            border-radius: 20px;
+        }
+
+        button:hover {
+            background: linear-gradient(to right,#0ea5e9,#4f46e5);
+            box-shadow: 0 0 10px #38bdf8;
+        }
+
+        /* Footer */
+        footer {
+            background: #020617;
+            color: #94a3b8;
+            text-align: center;
+            padding: 15px;
+            border-top: 1px solid #334155;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .projects {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+</style>
+<link rel="stylesheet" href="./sample.css">
+<body>
+    <!--HEADER-->
+    <header>
+        <h1>Hi! I'm Asmita Ramakrishnan</h1>
+        
+        
+    </header>
+    <!--NAVBAR-->
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Projects</a>
+        <a href="#">Contact</a>
+    </nav>
+
+    <!-- ABOUT -->
+    <section>
+        <h2>About Me</h2>
+        <p>I am a budding Electronics and communication engineering at Panimalar Engineering college.<br>
+            Passionate about electronics, embedded systems, and smart technologies.<br>I like designing and building projects that solve real-world challenges using sensors and microcontrollers.</p>
+        <img src="https://via.placeholder.com/150" alt="profile">
+    </section>
+
+    <!-- PROJECTS -->
+    <section>
+        <h2>Projects</h2>
+        <div class="projects">
+            <div class="card">
+                <h3>Project 1</h3>
+                <p>Solar Pannel Tracker</p>
+            </div>
+
+            <div class="card">
+                <h3>Project 2</h3>
+                <p>Sensor Based Smart Shoe For Independt And Mobility<br>This project focuses on improving safety and independent mobility using technology.
+It was recognized with a Best Paper Presentation award at an international conference.
+I have experience in Arduino, circuit design, and basic IoT applications.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section>
+        <section id="contact">
+    <h2>Contact</h2>
+
+    <!-- Contact Info -->
+    <div class="contact-cards">
+
+        <div class="contact-box">
+            <h4>Email</h4>
+            <p>
+                <a href="mailto:asmitaece01@gmail.com">
+                    asmitaece01@gmail.com
+                </a>
+            </p>
+        </div>
+
+        <div class="contact-box">
+            <h4>LinkedIn</h4>
+            <p>
+                <a href="https://www.linkedin.com/in/asmita-ramakrishnan-a82830379?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank">
+                    View Profile
+                </a>
+            </p>
+        </div>
+
+        <div class="contact-box">
+            <h4>Location</h4>
+            <p>Panimalar Engineering College, Chennai</p>
+        </div>
+
+    </div>
+
+    
+   
+</section>
+    </section>
+
+        <h2>Contact</h2>
+        <form>
+            <input type="text" placeholder="Name"><br><br>
+            <input type="email" placeholder="Email"><br><br>
+            <textarea placeholder="Message"></textarea><br><br>
+            <button type="button" onclick="showMessage()">Send</button>
+        </form>
+       
+    
+   
+</section>
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2026 My Portfolio</p>
+    </footer>
+
+    <!-- JS BASIC -->
+    <script>
+        function showMessage() {
+            alert("Message sent!");
+        }
+    </script>
+
+</body>
+</html>
+    </nav>
+
+    
