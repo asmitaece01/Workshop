@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Asmita Portfolio</title>
+
+<style>
+
+/* RESET */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+/* THEME */
+:root{
+    --bg:#020617;
+    --text:#e2e8f0;
+    --card:rgba(255,255,255,0.05);
+    --accent:#22c55e;
+    --accent2:#38bdf8;
+}
+
+.light{
+    --bg:#f1f5f9;
+    --text:#0f172a;
+    --card:#ffffff;
+    --accent:#2563eb;
+    --accent2:#7c3aed;
+}
+
+/* BODY */
+body{
+    font-family:sans-serif;
+    background:linear-gradient(270deg,#020617,#0f172a,#020617);
+    background-size:400% 400%;
+    animation:bgMove 10s infinite;
+    color:var(--text);
+}
+
+/* BACKGROUND ANIMATION */
+@keyframes bgMove{
+    0%{background-position:0%}
+    50%{background-position:100%}
+    100%{background-position:0%}
+}
+
+/* NAVBAR */
+nav{
+    display:flex;
+    justify-content:space-between;
+    padding:15px 40px;
+    background:rgba(255,255,255,0.05);
+    backdrop-filter:blur(15px);
+    border-bottom:1px solid rgba(255,255,255,0.1);
+    position:sticky;
+    top:0;
+}
+
+nav a{
+    color:var(--text);
+    margin:0 10px;
+    text-decoration:none;
+}
+
+nav a:hover{
+    color:var(--accent);
+}
+
+/* HERO */
+header{
+    text-align:center;
+    padding:80px 20px;
+}
+
+header h1{
+    font-size:2.5rem;
+    background:linear-gradient(to right,var(--accent),var(--accent2));
+    -webkit-background-clip:text;
+    color:transparent;
+}
+
+header p{
+    opacity:0.7;
+}
+
+/* BUTTON */
+.btn{
+    padding:10px 20px;
+    border:none;
+    background:linear-gradient(45deg,var(--accent),var(--accent2));
+    color:white;
+    border-radius:30px;
+    cursor:pointer;
+    margin-top:15px;
+    transition:0.3s;
+}
+
+.btn:hover{
+    transform:scale(1.1);
+    box-shadow:0 0 10px var(--accent);
+}
+
+/* SECTION */
+section{
+    padding:60px 20px;
+    text-align:center;
+}
+
+h2{
+    background:linear-gradient(to right,var(--accent),var(--accent2));
+    -webkit-background-clip:text;
+    color:transparent;
+}
+
+/* PROJECTS */
+.projects{
+    display:flex;
+    gap:20px;
+    justify-content:center;
+    flex-wrap:wrap;
+}
+
+/* CARD */
+.card{
+    background:var(--card);
+    backdrop-filter:blur(15px);
+    border:1px solid rgba(255,255,255,0.1);
+    padding:20px;
+    border-radius:20px;
+    width:260px;
+    transition:0.4s;
+    opacity:0;
+    transform:translateY(50px);
+}
+
+.card.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+.card:hover{
+    transform:scale(1.08);
+    box-shadow:0 0 20px rgba(56,189,248,0.6);
+}
+
+/* CONTACT */
+.contact-box{
+    background:var(--card);
+    backdrop-filter:blur(10px);
+    padding:15px;
+    border-radius:15px;
+    margin:10px;
+    border:1px solid rgba(255,255,255,0.1);
+}
+
+/* INPUT */
+input, textarea{
+    width:80%;
+    padding:10px;
+    border:none;
+    border-radius:10px;
+    margin-top:10px;
+    outline:none;
+}
+
+/* FOOTER */
+footer{
+    text-align:center;
+    padding:20px;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+    nav{
+        flex-direction:column;
+        text-align:center;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAV -->
+<nav>
+    <div><b>Asmita</b></div>
+    <div>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+        <button onclick="toggleTheme()" class="btn">🌙</button>
+    </div>
+</nav>
+
+<!-- HERO -->
+<header id="home">
+    <h1>Hi, I'm Asmita Ramakrishnan</h1>
+    <p>Electronics & Communication Engineer</p>
+    <button class="btn">View Work</button>
+</header>
+
+<!-- ABOUT -->
+<section id="about">
+    <h2>About Me</h2>
+    <p>
+        Passionate about electronics, embedded systems and smart tech.
+        I build real-world solutions using sensors and microcontrollers.
+    </p>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+    <h2>Projects</h2>
+    <div class="projects">
+
+        <div class="card">
+            <h3>Solar Tracker</h3>
+            <p>Optimizes solar panel efficiency using automation.</p>
+        </div>
+
+        <div class="card">
+            <h3>Smart Shoe</h3>
+            <p>Improves mobility & safety. Award-winning project.</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+    <h2>Contact</h2>
+
+    <div class="contact-box">
+        <p>Email: asmitaece01@gmail.com</p>
+    </div>
+
+    <div class="contact-box">
+        <a href="https://www.linkedin.com" target="_blank">LinkedIn</a>
+    </div>
+
+    <form>
+        <input type="text" placeholder="Name"><br>
+        <input type="email" placeholder="Email"><br>
+        <textarea placeholder="Message"></textarea><br>
+        <button type="button" class="btn" onclick="sendMsg()">Send</button>
+    </form>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <p>© 2026 Portfolio</p>
+</footer>
+
+<script>
+
+/* THEME */
+function toggleTheme(){
+    document.body.classList.toggle("light");
+}
+
+/* MESSAGE */
+function sendMsg(){
+    alert("Message Sent 🚀");
+}
+
+/* SCROLL ANIMATION */
+const cards = document.querySelectorAll('.card');
+
+window.addEventListener('scroll', () => {
+    cards.forEach(card => {
+        const top = card.getBoundingClientRect().top;
+        if(top < window.innerHeight - 100){
+            card.classList.add('show');
+        }
+    });
+});
+
+</script>
+
+</body>
+</html>
